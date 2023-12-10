@@ -24,7 +24,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: pages
-          path: site
+          path: |
+            site
+            htmlcov
           if-no-files-found: error
 
   # Deploy job
