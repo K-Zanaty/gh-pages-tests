@@ -17,19 +17,15 @@ jobs:
       - name: mkdocs package install
         run: |
           pip install -r requirements.txt
+      - name: Copy coverage results
+          run: |
+            cd docs
+            mkdir coverage
+            cd ..
+            cp -r htmlcov/* ./docs/coverage/
       - name: mkdocs build
         run: |
           mkdocs build
-      - name: Copy coverage results
-        run: |
-          cd docs
-          mkdir coverage
-          ls
-          cd ..
-          ls
-          cp -r htmlcov/* ./docs/coverage/
-          cd docs/coverage
-          ls
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
