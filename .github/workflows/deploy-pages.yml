@@ -25,7 +25,7 @@ jobs:
           cd docs
           mkdir coverage
           cd ..
-          cp -a htmlcov/. ./docs/coverage/
+          cp -r htmlcov/* ./docs/coverage/
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
