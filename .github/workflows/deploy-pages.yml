@@ -16,10 +16,7 @@ jobs:
 
       - name: mkdocs package install
         run: |
-          pip install mkdocs mkdocs-autorefs mkdocs-git-authors-plugin
-          pip install mkdocs-git-committers-plugin mkdocs-material
-          pip install mkdocs-material-extensions
-          pip install mkdocstrings mkdocstrings-python
+          pip install -r requirements.txt
       - name: mkdocs build
         run: |
           mkdocs build
