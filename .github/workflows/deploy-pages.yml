@@ -22,7 +22,10 @@ jobs:
           mkdocs build
       - name: Copy coverage results
         run: |
-          cp
+          cd docs
+          mkdir coverage
+          cd ..
+          cp htmlcov/ ./docs/coverage
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
