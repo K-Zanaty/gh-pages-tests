@@ -18,11 +18,11 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Copy coverage results
-          run: |
-            cd docs
-            mkdir coverage
-            cd ..
-            cp -r htmlcov/* ./docs/coverage/
+        run: |
+          cd docs
+          mkdir coverage
+          cd ..
+          cp -r htmlcov/* ./docs/coverage/
       - name: mkdocs build
         run: |
           mkdocs build
