@@ -20,12 +20,14 @@ jobs:
       - name: mkdocs build
         run: |
           mkdocs build
+      - name: Copy coverage results
+        -
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: pages
           path: |
-            htmlcov
+            site
           if-no-files-found: error
 
   # Deploy job

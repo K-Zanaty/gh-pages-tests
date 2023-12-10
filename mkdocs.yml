@@ -5,6 +5,7 @@ repo_name: adriandavidauer/VVAD
 
 nav:
   - Home: README.md
+  - Coverage: test.md
   - Human Accuracy: human-accuracy.md
   - VVAD LRS3:
       - Utily functions:
