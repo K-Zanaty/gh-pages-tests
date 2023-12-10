@@ -25,7 +25,6 @@ jobs:
         with:
           name: pages
           path: |
-            site
             htmlcov
           if-no-files-found: error
 
